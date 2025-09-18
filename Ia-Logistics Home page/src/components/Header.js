@@ -50,7 +50,7 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t shadow-md">
           <nav className="flex flex-col space-y-3 p-4 font-medium">
-            <Link to="/about" className="hover:text-blue-600 transition">About Us</Link>
+            <Link to="/aboutus" className="hover:text-blue-600 transition">About Us</Link>
             <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
             <Link to="/industries" className="hover:text-blue-600 transition">Industries</Link>
             <Link to="/why" className="hover:text-blue-600 transition">Why Choose Us</Link>
@@ -69,3 +69,4 @@ const Header = () => {
 };
 
 export default Header;
+
