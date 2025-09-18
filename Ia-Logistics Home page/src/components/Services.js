@@ -5,12 +5,12 @@ const Services = () => {
     {
       title: "Air Freight",
       desc: "Fast, priority handling for time-critical shipments.",
-      img: "http://freightsms.com/Content/img/pics/img03.jpg", 
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJThQvLCQW0q6UUCs6Kvms-dymzinz0KJhQ&s", 
     },
     {
       title: "Sea Freight",
       desc: "Cost-effective bulk cargo solutions worldwide.",
-      img: "http://freightsms.com/Content/img/pics/img02.jpg", 
+      img: "https://blog.customodal.com/hubfs/Imported_Blog_Media/shutterstock_411005038-1-1.jpg", 
     },
     {
       title: "Road & Rail",
@@ -75,4 +75,5 @@ const Services = () => {
 };
 
 export default Services;
+
 
