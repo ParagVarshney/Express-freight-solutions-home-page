@@ -11,35 +11,38 @@ const Industries = () => {
   ];
 
   return (
-    <section
-      id="industries"
-      className="relative py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white"
-    >
-      <div className="absolute inset-0 bg-black/30"></div>
+    <section id="industries" className="py-20 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        
+        {/* Left Content */}
+        <div>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+            Industry Sectors Coverage
+          </h3>
+          <p className="text-gray-600 mb-8">
+            We cater to a wide range of industries with customized logistics
+            solutions that ensure efficiency, reliability, and speed.
+          </p>
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
-        {/* Heading */}
-        <h3 className="text-4xl md:text-5xl font-bold mb-6">
-          Industries We Serve
-        </h3>
-        <p className="text-blue-100 max-w-2xl mx-auto mb-14">
-          We cater to a wide range of industries with customized logistics
-          solutions that ensure efficiency, reliability, and speed.
-        </p>
+          <ul className="space-y-5">
+            {industries.map(({ title, icon: Icon }) => (
+              <li key={title} className="flex items-center gap-4 text-gray-700">
+                <div className="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100 text-blue-700">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <span className="text-lg font-medium">{title}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        {/* Industries Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-          {industries.map(({ title, icon: Icon }) => (
-            <div
-              key={title}
-              className="p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md hover:bg-white hover:text-blue-800 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-white/20">
-                <Icon className="w-6 h-6" />
-              </div>
-              <h4 className="font-semibold">{title}</h4>
-            </div>
-          ))}
+        {/* Right Image */}
+        <div className="rounded-lg overflow-hidden shadow-lg">
+          <img
+            src="https://media.istockphoto.com/id/1316146871/photo/big-rig-powerful-professional-industrial-semi-truck-for-long-haul-delivery-commercial-cargo.jpg?s=612x612&w=0&k=20&c=_5Xiyv5KQed6P9jfpqJskOsCev4L8UALIMmJio4UCUk=" // replace with your truck image
+            alt="Industry coverage"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
