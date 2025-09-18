@@ -16,7 +16,7 @@ const About = () => {
       className="relative py-20 text-white"
       style={{
         backgroundImage:
-          "url('https://img.freepik.com/free-photo/close-up-keyboard-glasses-with-executives-background_1098-3635.jpg?semt=ais_incoming&w=740&q=80')",
+          "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60Sx9vVqayBDlngD8bSudYDXpvLM50sdX9w&s')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -55,3 +55,4 @@ const About = () => {
 };
 
 export default About;
+
