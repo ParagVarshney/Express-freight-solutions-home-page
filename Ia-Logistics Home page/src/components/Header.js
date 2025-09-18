@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom"; // 👈 import Link
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,27 +16,26 @@ const Header = () => {
             className="h-12 w-auto sm:h-14 md:h-16 object-contain"
           />
           <span className="text-base sm:text-lg md:text-xl font-semibold text-blue-700 ml-2">
-              Express Freight Solutions
+            Express Freight Solutions
           </span>
-
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-medium">
-          <a href="#about" className="hover:text-blue-600 transition">About Us</a>
-          <a href="#services" className="hover:text-blue-600 transition">Services</a>
-          <a href="#industries" className="hover:text-blue-600 transition">Industries</a>
-          <a href="#why" className="hover:text-blue-600 transition">Why Choose Us</a>
-          <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
+          <Link to="/aboutus" className="hover:text-blue-600 transition">About Us</Link>
+          <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
+          <Link to="/industries" className="hover:text-blue-600 transition">Industries</Link>
+          <Link to="/why" className="hover:text-blue-600 transition">Why Choose Us</Link>
+          <Link to="/contact" className="hover:text-blue-600 transition">Contact</Link>
         </nav>
 
         {/* CTA button (Desktop) */}
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Get a Quote
-        </a>
+        </Link>
 
         {/* Mobile menu button */}
         <button
@@ -50,17 +50,17 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t shadow-md">
           <nav className="flex flex-col space-y-3 p-4 font-medium">
-            <a href="#about" className="hover:text-blue-600 transition">About Us</a>
-            <a href="#services" className="hover:text-blue-600 transition">Services</a>
-            <a href="#industries" className="hover:text-blue-600 transition">Industries</a>
-            <a href="#why" className="hover:text-blue-600 transition">Why Choose Us</a>
-            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
-            <a
-              href="#contact"
+            <Link to="/about" className="hover:text-blue-600 transition">About Us</Link>
+            <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
+            <Link to="/industries" className="hover:text-blue-600 transition">Industries</Link>
+            <Link to="/why" className="hover:text-blue-600 transition">Why Choose Us</Link>
+            <Link to="/contact" className="hover:text-blue-600 transition">Contact</Link>
+            <Link
+              to="/contact"
               className="bg-blue-600 text-white px-5 py-2 rounded-lg text-center hover:bg-blue-700 transition"
             >
               Get a Quote
-            </a>
+            </Link>
           </nav>
         </div>
       )}
