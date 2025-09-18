@@ -13,8 +13,8 @@ export default function App() {
     <div className="font-sans text-gray-800 overflow-x-hidden">
       <Header />
       <Hero />
-      <About />
       <Services />
+      <About />
       <Industries />
       <WhyChooseUs />
       <Contact />
